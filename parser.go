@@ -21,8 +21,8 @@ func (p *Parser) ParseFromString(s string) map[string]string {
 		if len(ss) != 2 {
 			continue
 		}
-		propety := strings.Trim(ss[0], " ")
-		value := strings.Trim(ss[1], " ")
+		propety := strings.TrimSpace(ss[0])
+		value := strings.TrimSpace(ss[1])
 		set[propety] = value
 	}
 	return set
